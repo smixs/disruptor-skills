@@ -1,0 +1,11 @@
+# internal dev journal — not part of the published skill
+implementation-notes.md
+
+# OS / editor cruft
+.DS_Store
+*.swp
+Thumbs.db
+
+# scratch
+/tmp/
+*.log

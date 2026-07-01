@@ -1,0 +1,21 @@
+{
+  "name": "disruptor",
+  "version": "1.0.0",
+  "description": "Ordered idea→ship flow for agentic software development in Claude Code — design, spec, executable architecture, an honest review loop, QA and safe deploy. No vibecode. Assembled by practitioners of @aostrikov_agents_chat.",
+  "author": {
+    "name": "Serge Shima & @aostrikov_agents_chat contributors",
+    "url": "https://t.me/aostrikov_agents_chat"
+  },
+  "homepage": "https://github.com/smixs/disruptor",
+  "repository": "https://github.com/smixs/disruptor",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "skill",
+    "ai-agents",
+    "agentic-development",
+    "spec-driven-development",
+    "code-review",
+    "prompt-engineering"
+  ]
+}
