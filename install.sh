@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 # Disruptor — быстрый установщик Claude Code скилла.
 #
-#   curl -fsSL https://raw.githubusercontent.com/smixs/disruptor/main/install.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/smixs/disruptor-skills/main/install.sh | bash
 #   ./install.sh              # personal:  ~/.claude/skills/disruptor  (во всех проектах)
 #   ./install.sh --project    # project:   ./.claude/skills/disruptor  (только этот репо)
 #
 set -euo pipefail
 
-REPO_URL="${DISRUPTOR_REPO:-https://github.com/smixs/disruptor.git}"
+REPO_URL="${DISRUPTOR_REPO:-https://github.com/smixs/disruptor-skills.git}"
 NAME="disruptor"
 
 if [ "${1:-}" = "--project" ]; then

@@ -12,7 +12,7 @@
 [![Claude Code Skill](https://img.shields.io/badge/Claude%20Code-Skill-8A2BE2?logo=anthropic&logoColor=white)](https://code.claude.com/docs/en/skills)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](CONTRIBUTING.md)
 [![Telegram](https://img.shields.io/badge/чат-@aostrikov__agents__chat-26A5E4?logo=telegram&logoColor=white)](https://t.me/aostrikov_agents_chat)
-[![GitHub stars](https://img.shields.io/github/stars/smixs/disruptor?style=social)](https://github.com/smixs/disruptor/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/smixs/disruptor-skills?style=social)](https://github.com/smixs/disruptor-skills/stargazers)
 
 </div>
 
@@ -62,21 +62,21 @@
 **Персонально (во всех проектах)**, самый простой путь, клонируем прямо в каталог скиллов:
 
 ```bash
-git clone https://github.com/smixs/disruptor ~/.claude/skills/disruptor
+git clone https://github.com/smixs/disruptor-skills ~/.claude/skills/disruptor
 ```
 
 **Через установщик** (кладёт только `SKILL.md` + `references/`, без `.git`):
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/smixs/disruptor/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/smixs/disruptor-skills/main/install.sh | bash
 # только для текущего репо:
-curl -fsSL https://raw.githubusercontent.com/smixs/disruptor/main/install.sh | bash -s -- --project
+curl -fsSL https://raw.githubusercontent.com/smixs/disruptor-skills/main/install.sh | bash -s -- --project
 ```
 
 **Только для одного проекта:**
 
 ```bash
-git clone https://github.com/smixs/disruptor .claude/skills/disruptor
+git clone https://github.com/smixs/disruptor-skills .claude/skills/disruptor
 ```
 
 Готово: Claude Code подхватывает скилл автоматически (правки `SKILL.md` применяются даже
