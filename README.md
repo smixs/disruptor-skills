@@ -124,7 +124,7 @@ git clone https://github.com/smixs/disruptor .claude/skills/disruptor
 
 ## Лицензия
 
-[MIT](LICENSE) © 2026 Serge Shima и контрибьюторы **@aostrikov_agents_chat**.
+[MIT](LICENSE) © **@aostrikov_agents_chat**.
 
 ---
 
