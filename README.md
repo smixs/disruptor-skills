@@ -109,7 +109,7 @@ git clone https://github.com/smixs/disruptor .claude/skills/disruptor
 Как контрибьютить: смотри [CONTRIBUTING.md](CONTRIBUTING.md). Обсуждение, заявки и споры идут
 в чате **[t.me/aostrikov_agents_chat](https://t.me/aostrikov_agents_chat)**.
 
-## Провенанс
+## Кредсы
 
 Собрано из наработок практиков чата **[@aostrikov_agents_chat](https://t.me/aostrikov_agents_chat)**
 (чат Алексея Острикова). Каждый источник лежит внутри `references/` **as is**, целиком, с
