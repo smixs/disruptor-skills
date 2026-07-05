@@ -1,7 +1,7 @@
 {
   "name": "disruptor",
   "version": "2.0.0",
-  "description": "12 Claude Code skills for agentic software development, stitched into one gated idea-to-ship pipeline: 7w3 design, build-ready spec, executable architecture guardrails, tracer-bullet slicing, an honest review loop, a parallel MVP worker fleet, demo-stand QA and safe server deploy. No vibecode. Assembled by practitioners of @aostrikov_agents_chat.",
+  "description": "12 agent skills for AI-driven software development, stitched into one gated idea-to-ship pipeline: 7w3 design, build-ready spec, executable architecture guardrails, tracer-bullet slicing, an honest review loop, a parallel MVP worker fleet, demo-stand QA and safe server deploy. Cross-agent skills format (Claude Code, Codex, Cursor, opencode). No vibecode. Assembled by practitioners of @aostrikov_agents_chat.",
   "author": {
     "name": "Serge Shima & @aostrikov_agents_chat contributors",
     "url": "https://t.me/aostrikov_agents_chat"
@@ -10,9 +10,9 @@
   "repository": "https://github.com/smixs/disruptor-skills",
   "license": "MIT",
   "keywords": [
-    "claude-code",
-    "claude-code-skills",
     "agent-skills",
+    "ai-coding-agents",
+    "codex",
     "ai-agents",
     "agentic-development",
     "spec-driven-development",

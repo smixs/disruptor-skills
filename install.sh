@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# Disruptor — installer for the full Claude Code skill set (all skills/*).
+# Disruptor — installer for the full skill set (all skills/*), targeting the
+# ~/.claude/skills convention. Other agents: npx skills@latest add smixs/disruptor-skills
 #
 #   curl -fsSL https://raw.githubusercontent.com/smixs/disruptor-skills/main/install.sh | bash
 #   ./install.sh              # personal:  ~/.claude/skills/<skill>   (all projects)
@@ -33,4 +34,4 @@ for SRC in "$TMP"/skills/*/; do
 done
 
 echo "✓ Installed $COUNT skills into $BASE/."
-echo "  Claude Code picks them up automatically (or restart the session)."
+echo "  Your agent picks them up automatically (or restart the session)."

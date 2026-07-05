@@ -1,15 +1,15 @@
 <div align="center">
 
-<img src="assets/banner.webp" alt="Disruptor: Claude Code skills for agentic software development — idea to ship, no vibecode" width="100%">
+<img src="assets/banner.webp" alt="Disruptor: agent skills for AI-driven software development — idea to ship, no vibecode" width="100%">
 
-# 🧨 Disruptor — agentic software development with Claude Code skills, from idea to ship
+# 🧨 Disruptor — agent skills for AI-driven software development, from idea to ship
 
-**A gated pipeline of 12 Claude Code skills that turns an idea into deployed, production-grade software — design, spec, executable architecture, honest review loops, QA, safe deploy. No vibecode.**
+**A gated pipeline of 12 agent skills that turns an idea into deployed, production-grade software — design, spec, executable architecture, honest review loops, QA, safe deploy. Works with Claude Code, Codex, Cursor, opencode — any agent that speaks the skills format. No vibecode.**
 
 [![version](https://img.shields.io/badge/version-2.0.0-orange)](CHANGELOG.md)
 [![skills](https://img.shields.io/badge/skills-12-blue)](#the-pipeline)
 [![license: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-[![Claude Code Skill](https://img.shields.io/badge/Claude%20Code-Skills-8A2BE2?logo=anthropic&logoColor=white)](https://code.claude.com/docs/en/skills)
+[![Agent Skills](https://img.shields.io/badge/agent-skills-8A2BE2)](https://skills.sh)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](CONTRIBUTING.md)
 [![Telegram](https://img.shields.io/badge/chat-@aostrikov__agents__chat-26A5E4?logo=telegram&logoColor=white)](https://t.me/aostrikov_agents_chat)
 [![GitHub stars](https://img.shields.io/github/stars/smixs/disruptor-skills?style=social)](https://github.com/smixs/disruptor-skills/stargazers)
@@ -20,7 +20,7 @@
 
 ## What is it
 
-**Disruptor** is a set of 12 [Claude Code](https://claude.com/claude-code) skills for agentic software development, stitched into **one idea-to-ship pipeline**. Each stage consumes the artifact of the previous one and hands a new artifact to the next, while a **router with Yes/No gates** decides what happens next. The agent acts **by rule**, not by vibe: it doesn't improvise the process and doesn't declare "done" early.
+**Disruptor** is a set of 12 agent skills for AI-driven software development, stitched into **one idea-to-ship pipeline**. Skills are plain Markdown with YAML frontmatter — an open cross-agent format read natively by Claude Code, Codex, Cursor, opencode and others. Each stage consumes the artifact of the previous one and hands a new artifact to the next, while a **router with Yes/No gates** decides what happens next. The agent acts **by rule**, not by vibe: it doesn't improvise the process and doesn't declare "done" early.
 
 The core premise: an agent's own feeling of "done" cannot be trusted — it is the main enemy. Every method here exists to survive a premature stop: the unread green test, the spec with a hidden default, the rubber-stamp review, the loop that only adds and never cuts. Each skill was extracted from real production runs by practitioners, not invented for a README.
 
@@ -76,12 +76,12 @@ git clone --depth 1 https://github.com/smixs/disruptor-skills /tmp/disruptor-ski
   && cp -R /tmp/disruptor-skills/skills/* ~/.claude/skills/
 ```
 
-Done — Claude Code discovers skills by the presence of folders in `~/.claude/skills/` (or `./.claude/skills/` for a single project); no extra registration command.
+Done — skills are discovered by the presence of the folders; no extra registration command. The `npx skills` installer places them into the right directory for each agent you use (`~/.claude/skills/`, `~/.agents/skills/`, …); `install.sh` and the clone target the `~/.claude/skills/` convention.
 
 <details>
-<summary>As a plugin (optional)</summary>
+<summary>As a Claude Code plugin (optional)</summary>
 
-The repo ships `.claude-plugin/plugin.json`, so it can also be installed through the Claude Code <code>/plugin</code> flow. For most users the installs above are enough.
+The repo ships `.claude-plugin/plugin.json`, so it can also be installed through the <code>/plugin</code> flow. For most users the installs above are enough.
 </details>
 
 ## Usage
@@ -106,9 +106,9 @@ Code that "technically works" but is bloated, fragile, and impossible to hold in
 
 Spec-kit and BMAD own your whole process end-to-end with heavy scaffolding. Disruptor is 12 small composable skills tied by a lightweight router — you can enter at any stage, use one skill standalone, or run the full flow. Compared to obra/superpowers (a broad general-purpose library), Disruptor is one opinionated pipeline for shipping web-facing software, including a parallel worker-fleet lane.
 
-### Can I use it with Codex or other agents?
+### Can I use it with Codex, Cursor, or other agents?
 
-Partially. The skills are plain Markdown: the four prompt templates (`write-spec`, `architecture-guardrails`, `qa-demo-stand`, `setup-server`) work as prompts in any capable agent. Auto-triggering and the router rely on Claude Code's skill discovery; `npx skills@latest add` can install into other agents that support the skills format.
+Yes. Skills are plain Markdown with YAML frontmatter — a cross-agent format, not a vendor feature. `npx skills@latest add smixs/disruptor-skills` installs them into whichever agents you use; agents with skill auto-discovery trigger the methods on their own, and in any agent you can always load a skill file explicitly or hand a prompt template to a fresh session.
 
 ### Do I need all 12 skills?
 
