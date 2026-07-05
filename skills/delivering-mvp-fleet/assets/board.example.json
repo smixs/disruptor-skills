@@ -1,0 +1,89 @@
+{
+ "_comment": "This is a small toy JSON example, the real thing might be more complex.",
+ "version": 1,
+ "tasks": {
+  "contract/domain-schema": {
+   "title": "Core domain objects + validation gate every writer passes through",
+   "kind": "contract",
+   "deps": [],
+   "tier": "T3+",
+   "doc": null,
+   "status": "done",
+   "claimedAt": "2026-01-01T10:00:00+00:00",
+   "doneAt": "2026-01-01T12:10:00+00:00"
+  },
+  "contract/ui-seam": {
+   "title": "Narrow Reader/Writer seam between data layer and UI (dual case shapes)",
+   "kind": "contract",
+   "deps": [],
+   "tier": "T3+",
+   "doc": null,
+   "status": "done",
+   "claimedAt": "2026-01-01T10:00:00+00:00",
+   "doneAt": "2026-01-01T11:40:00+00:00"
+  },
+  "infra/golden-fixtures": {
+   "title": "Materialize the golden case cards as deterministic fixtures + manifest",
+   "kind": "infra",
+   "deps": [
+    "contract/domain-schema"
+   ],
+   "tier": "T3",
+   "doc": null,
+   "status": "done",
+   "claimedAt": null,
+   "doneAt": "2026-01-01T14:00:00+00:00"
+  },
+  "platform/store": {
+   "title": "Append-only store: write-gate validated, confirm/override audit, seam-conforming read API",
+   "kind": "platform",
+   "deps": [
+    "contract/domain-schema",
+    "contract/ui-seam"
+   ],
+   "tier": "T3",
+   "doc": null,
+   "status": "claimed",
+   "claimedAt": "2026-01-01T15:02:00+00:00",
+   "doneAt": null
+  },
+  "feature/us1-queue": {
+   "title": "US-1: prioritized queue view over the seam (golden cards A+B must render)",
+   "kind": "feature",
+   "deps": [
+    "contract/ui-seam",
+    "infra/golden-fixtures"
+   ],
+   "tier": "T2",
+   "doc": null,
+   "status": "open",
+   "claimedAt": null,
+   "doneAt": null
+  },
+  "feature/us2-detail-audit": {
+   "title": "US-2: case detail + downloadable per-rule audit artifact",
+   "kind": "feature",
+   "deps": [
+    "platform/store"
+   ],
+   "tier": "T2",
+   "doc": null,
+   "status": "open",
+   "claimedAt": null,
+   "doneAt": null
+  },
+  "integration/one-boot": {
+   "title": "One-boot completeness: every user story reachable in one session (mutation-checked eval) + demo script update",
+   "kind": "integration",
+   "deps": [
+    "feature/us1-queue",
+    "feature/us2-detail-audit"
+   ],
+   "tier": "T3",
+   "doc": null,
+   "status": "open",
+   "claimedAt": null,
+   "doneAt": null
+  }
+ }
+}
