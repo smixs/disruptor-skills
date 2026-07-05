@@ -1,6 +1,6 @@
 ---
 name: spawning-reviewers
-description: Use when you need a critical review, second opinion, or adversarial check on any artifact — code, a design, a document, a plan, a research report, a process, a deck — by dispatching one or more reviewer agents or buddies, and want the result to be honest and high-signal. Especially when a review felt like a rubber-stamp, parroted your own framing back, produced vague findings with no specifics, when you're tempted to tell the reviewer what you expect or where to look, when reviewing something assembled from multiple sources (a merge, a consolidation), or when running a review→fix loop. Any domain.
+description: Use when dispatching one or more reviewer agents for an adversarial second opinion on any artifact — code, a design, a document, a plan, a research report, a deck. Especially when a prior review felt like a rubber-stamp or parroted the prompt's framing, when findings were vague with no locations, when tempted to tell the reviewer what to expect or where to look, or when reviewing something assembled from multiple sources (a merge, a consolidation). Any domain.
 ---
 
 # Spawning Reviewers
@@ -9,10 +9,10 @@ description: Use when you need a critical review, second opinion, or adversarial
 - **Stage:** 5a. Review (inside the build loop) · **Kind:** method
 - **Inputs:** a settled artifact to critique (frozen — no edits while the review runs).
 - **Outputs:** ranked findings anchored to precise locations — **no verdict**.
-- **Entry gate:** called each review-and-fix iteration by `converge-and-polish`.
+- **Entry gate:** called each review-and-fix iteration by the `converging-and-polishing` skill.
 - **Done when:** located findings returned from a cross-family / independent critic
   (unanchored claims don't count).
-- **Next:** back to `converge-and-polish` — you fix the real findings, verify, re-spawn.
+- **Next:** back to the `converging-and-polishing` skill — you fix the real findings, verify, re-spawn.
 
 ## Overview
 
@@ -124,3 +124,5 @@ Notes: scale to stakes (a sanity check = one reviewer; an architectural/irrevers
 - **A fixed lens list regardless of phase.** Match the lenses to the goal.
 - **Treating agreement as confirmation.** Agreement you induced (by leading) or that's correlated (same model) confirms nothing.
 - **Acting on the conclusion, not the evidence.** Verify the few load-bearing findings yourself — both directions.
+
+*Source: Nambr (@aostrikov_agents_chat), Spawning Reviewers.*

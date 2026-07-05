@@ -1,17 +1,13 @@
 ---
-name: 7w3-driven-development
+name: designing-with-7w3
 description: >-
-  A design methodology that captures any subject as TEN facets — the Seven Ws
-  (Who, What, Where, When, Wish, Why, What's-next) plus three (Boundaries,
-  Limitations, Method/how/decision-flows) — kept TOGETHER in one file per
-  subject, with subjects decomposed into a tree of any depth. Use this whenever
-  you are designing a feature, system, refactor, process, protocol, or decision
-  before implementing it; expanding a spec, RFC, or ticket into an implementable
-  design; writing or reorganizing design docs; or when the user mentions "7w3",
-  the seven Ws, "wishes / functions / decision flows", or wants a design that is
-  "like BDD or user-story-driven development but fuller". Prefer this over
-  ad-hoc design notes or a linear phase/Gantt plan — and reach for it even when
-  the user just says "design X" or "write this up properly" without naming 7w3.
+  Use when designing a feature, system, refactor, process, protocol, or
+  decision before implementing it; when expanding a vague spec, RFC, or ticket
+  into an implementable design; when writing or reorganizing design docs; when
+  the user mentions "7w3", the seven Ws, "wishes / functions / decision
+  flows", or wants a design "like BDD or user-story-driven development but
+  fuller"; or when the user says "design X" or "write this up properly" —
+  prefer this over ad-hoc design notes or a phase/Gantt plan.
 ---
 
 # 7w3 Driven Development
@@ -21,10 +17,10 @@ description: >-
 - **Inputs:** an idea / RFC / ticket / feature request (from a router on-ramp).
 - **Outputs:** a 7w3 subject tree — each subject's ten facets, grounded in real things.
 - **Entry gate:** you're moving from "what we want" to "how it works"; the repo's
-  conventions/CONTEXT.md exist (else run `setup-and-domain-model.md` first).
+  conventions/CONTEXT.md exist (else invoke the `setting-up-domain-model` skill first).
 - **Done when:** every leaf subject answers all ten facets (or an explicit `n/a — because…`),
   Where/Who/When cite real files/names/events, no unacknowledged holes remain.
-- **Next:** `specification-prompt-template.md` — turn the settled design into a canonical spec.
+- **Next:** the `write-spec` skill — turn the settled design into a canonical spec.
 - **Maintains:** CONTEXT.md (cite/sharpen terms) · ADRs (record hard-to-reverse design decisions).
 
 7w3 is a way to design *anything* by describing each **subject** completely along
@@ -249,3 +245,5 @@ A small tree: a root subject with a child. Each file has all ten; shown compress
 
 The root's **Where** and **Method** point at the child; the child answers all ten *for the
 token*. That's the tree: decomposed by subject, ten-together at every node.
+
+*Source: Nambr (@aostrikov_agents_chat), 7w3 Driven Development.*

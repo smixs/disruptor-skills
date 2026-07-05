@@ -1,14 +1,11 @@
 ---
-name: setup-and-domain-model
+name: setting-up-domain-model
 description: >-
-  Use once per repository before the flow begins — and then continuously — to
-  stand up the two durable artifacts every later stage reads and writes: a
-  CONTEXT.md glossary (the project's canonical vocabulary) and docs/adr/
-  (architecture decision records). Reach for it when starting the flow in a repo
-  that has no CONTEXT.md / conventions yet, when a term keeps getting used two
-  ways, or when a hard-to-reverse decision was just made and needs recording.
-  Triggers: "set up the repo", "what's our vocabulary", "record this decision",
-  "write an ADR", "the glossary".
+  Use when starting the flow in a repo that has no CONTEXT.md / conventions
+  yet, when a term keeps getting used two ways, or when a hard-to-reverse
+  decision was just made and needs recording. Triggers: "set up the repo conventions",
+  "what's our vocabulary", "record this decision", "write an ADR", "the
+  glossary".
 ---
 
 # Setup and domain model
@@ -22,7 +19,7 @@ description: >-
   conventions recorded), or a term/decision needs pinning down mid-flow.
 - **Done when:** conventions are recorded; every term the flow relies on has one
   canonical definition; every hard-to-reverse decision is an ADR.
-- **Next:** the stage you were routed to — usually `7w3-driven-development.md`.
+- **Next:** the stage you were routed to — usually the `designing-with-7w3` skill.
 - **Maintains:** it *owns* CONTEXT.md and docs/adr/; every other stage keeps them live.
 
 ## Why this exists
@@ -98,3 +95,5 @@ reader would guess. An ADR for every decision is noise that buries the few that 
 - Any stage that discovers a term drifting fixes it in CONTEXT.md **then**, not later.
 - When reality diverges from an ADR, update the ADR — don't let the code quietly redefine
   the decision. Same rule as the design of record: the document leads, code follows.
+
+*Source: Serge Shima (@aostrikov_agents_chat), Setup and domain model.*

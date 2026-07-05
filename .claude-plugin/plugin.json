@@ -1,7 +1,7 @@
 {
   "name": "disruptor",
-  "version": "1.0.0",
-  "description": "Ordered idea→ship flow for agentic software development in Claude Code — design, spec, executable architecture, an honest review loop, QA and safe deploy. No vibecode. Assembled by practitioners of @aostrikov_agents_chat.",
+  "version": "2.0.0",
+  "description": "12 Claude Code skills for agentic software development, stitched into one gated idea-to-ship pipeline: 7w3 design, build-ready spec, executable architecture guardrails, tracer-bullet slicing, an honest review loop, a parallel MVP worker fleet, demo-stand QA and safe server deploy. No vibecode. Assembled by practitioners of @aostrikov_agents_chat.",
   "author": {
     "name": "Serge Shima & @aostrikov_agents_chat contributors",
     "url": "https://t.me/aostrikov_agents_chat"
@@ -11,11 +11,16 @@
   "license": "MIT",
   "keywords": [
     "claude-code",
-    "skill",
+    "claude-code-skills",
+    "agent-skills",
     "ai-agents",
     "agentic-development",
     "spec-driven-development",
+    "subagents",
+    "multi-agent",
     "code-review",
+    "software-architecture",
+    "mvp",
     "prompt-engineering"
   ]
 }

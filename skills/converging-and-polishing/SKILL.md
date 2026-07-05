@@ -1,16 +1,13 @@
 ---
-name: converge-and-polish
+name: converging-and-polishing
 description: >-
-  Use when iterating on any artifact — code, a design, a document, a system, a
-  process, writing, an analysis — through repeated review-and-fix passes toward a
-  finished, hardened state, or when running long unsupervised improvement work
-  that should continue until a human says stop. Reach for it the moment you're
-  tempted to hand-wave "a few more passes", to call something done after one clean
-  review, to keep adding without ever cutting, or when you're unsure how many
-  polish rounds are enough or when to stop. Triggers: "iterate until it
-  converges", "keep reviewing and fixing", "harden this", "run a review loop",
-  "keep polishing / improving until I say stop", "autonomous improvement loop",
-  "run this to convergence". Any domain.
+  Use when iterating on any artifact — code, design, document, process,
+  analysis — through repeated review-and-fix passes toward a hardened state, or
+  when running long unsupervised improvement that continues until a human stop
+  signal. Also when "a few more passes" gets hand-waved, when
+  something is called done after one clean review, or when rounds only add and
+  never cut. Triggers: "iterate until it converges", "harden this", "run a
+  review loop", "keep polishing until I say stop". Any domain.
 ---
 
 # Converge and polish
@@ -23,7 +20,7 @@ description: >-
 - **Done when (Mode A bar):** two consecutive near-zero passes from cross-family critics
   + a final whole-artifact pass, with polish-to-settle after the last destabilizing change.
   **You** declare it from the raw findings — never because a reviewer said "looks converged."
-- **Next:** `demo-stand-testing.md` — once all slices have converged.
+- **Next:** the `qa-demo-stand` skill — once all slices have converged.
 - **Maintains:** —
 
 One loop, two exit policies. The loop turns reviews and cuts into steady,
@@ -178,6 +175,25 @@ holds the full discipline — this is only the loop-specific reminder.
 
 ---
 
+## Convergence budget — bounded vs full bar
+
+Convergence depth is a function of **blast-radius × volume × verifiability** —
+not a fixed ritual. Two policies of the same principle:
+
+- **Full bar** (the default in this skill): two consecutive near-zero
+  cross-family passes + a final whole-artifact pass. Applies to whole slices and
+  whole artifacts.
+- **Bounded bar**: gate → ONE fresh adversarial review → fix critical/major/high
+  findings, disposition the rest → gate. Applies to narrow fleet worker nodes,
+  per the `delivering-mvp-fleet` skill's tiering; contract/foundation nodes earn
+  a panel or two passes.
+
+Reviewers always find *something*, so the DEPTH of convergence is chosen by
+risk — this skill and `delivering-mvp-fleet` name the same trade-off from
+opposite ends.
+
+---
+
 ## Red flags & rationalizations
 
 This skill exists to outlast your growing sense that the work is *done*. Every
@@ -318,3 +334,5 @@ from a different model family than you, keep ratchet and cut separate, count
 iterations for cadence, polish to settle after every change (and overestimate how
 much), keep an honest in-work trail, judge convergence yourself from raw findings,
 and — in endless mode — rotate focus and stop only when explicitly told.
+
+*Source: Nambr (@aostrikov_agents_chat), Converge and Polish.*

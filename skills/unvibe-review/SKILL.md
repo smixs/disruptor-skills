@@ -11,7 +11,7 @@ description: Use when a project, system, document, or workflow feels bloated, ov
 - **Outputs:** ranked reframes/cuts by collapse-power × confidence, each steelmanned, plus a calibrate step.
 - **Entry gate:** ~1 cut pass per ~5 review iterations — or sooner if several rounds only ever added.
 - **Done when:** the cut pass returns its seeds; then polish-to-settle on the touched area before moving on.
-- **Next:** back to `converge-and-polish`.
+- **Next:** back to the `converging-and-polishing` skill.
 
 ## Overview
 
@@ -211,3 +211,5 @@ Never recommend adding a standing **parsimony counter-force** to whatever loop p
   again. Aim for the seed.
 - **Stopping at "it works."** That is the trap this skill exists to break.
 - **Over-cutting.** Skipping the steelman and the *Calibrate* step turns parsimony into vandalism.
+
+*Source: Nambr (@aostrikov_agents_chat), unvibe-review.*

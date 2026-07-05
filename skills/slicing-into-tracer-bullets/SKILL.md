@@ -1,18 +1,13 @@
 ---
-name: breakdown-into-slices
+name: slicing-into-tracer-bullets
 description: >-
-  Use to turn a build-ready spec + a settled module architecture into an ordered
-  list of independently-buildable VERTICAL SLICES (tracer bullets) — each cutting
-  end-to-end through every layer (schema → API → UI → tests), demoable on its own,
-  with explicit dependencies — so each slice is one small, focused build-loop run
-  in its own fresh session. Reach for it whenever you're about to start building
-  from a spec that is more than a single slice, or you catch yourself planning by
-  horizontal layer ("first all the schema, then all the API"). Triggers: "break
-  this into issues/tasks", "what do we build first", "slice this spec", "plan the
-  build order".
+  Use when about to start building from a build-ready spec that is bigger than a
+  single slice, or when the plan is organized by horizontal layer ("first all the
+  schema, then all the API"). Triggers: "break this into issues/tasks", "what do
+  we build first", "slice this spec", "plan the build order".
 ---
 
-# Breakdown into slices
+# Slicing into tracer bullets
 
 ## Stage contract
 - **Stage:** 4. Breakdown · **Kind:** method
@@ -24,8 +19,11 @@ description: >-
 - **Done when:** every slice is end-to-end (touches all layers it needs),
   demoable/verifiable alone, and its dependencies are stated. No horizontal-only
   ("schema-only", "API-only") items remain.
-- **Next:** `converge-and-polish.md` — run the build loop **once per slice**, each
-  in its own fresh session seeded from the spec + that one slice.
+- **Next:** two engines. Sequential (default): the `converging-and-polishing` skill —
+  run the build loop **once per slice**, each in its own fresh session seeded from the
+  spec + that one slice. Fleet (gate G3F: parallelizable across independent nodes AND
+  budget for a worker fleet): the `delivering-mvp-fleet` skill — it builds its own
+  board from the spec + slices.
 - **Maintains:** —
 
 ## Why vertical, not horizontal
@@ -60,8 +58,8 @@ not discovered at the end. And each slice merges independently.
   `Blocked by: <slice>`. The first slice should be the thinnest complete path through
   the system (the "walking skeleton") — it proves the seams end to end.
 - **Value-and-risk next.** After the skeleton, order by what de-risks or delivers most.
-- **One slice per build session.** Each `converge-and-polish` run starts fresh, seeded
-  with the spec + exactly one slice — not the whole conversation. Keeping the
+- **One slice per build session.** Each `converging-and-polishing` run starts fresh,
+  seeded with the spec + exactly one slice — not the whole conversation. Keeping the
   design→spec→breakdown work *unbroken in one context window*, then handing each slice
   to a clean session, is the context hygiene that keeps every build sharp.
 
@@ -86,3 +84,5 @@ not discovered at the end. And each slice merges independently.
 - The list has no `Blocked by:` anywhere on a multi-slice build → dependencies are hidden
   and the build order is guesswork.
 - A single slice clearly won't converge in one session → split it before building.
+
+*Source: Serge Shima (@aostrikov_agents_chat), Breakdown into slices.*
