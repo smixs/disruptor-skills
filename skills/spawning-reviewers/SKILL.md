@@ -63,6 +63,7 @@ A reviewer that reasons from your prompt instead of inspecting the actual artifa
    - The list is **not fixed**: match it to the goal. Drop premature lenses (e.g. spec/design-conformance early in a build, before the design is even settled) and add ones the task demands. A stale lens set finds stale things. Useful task-shaped lenses beyond the defaults (inconsistencies, contract mismatches, weak spots, dead/duplicated/under-specified):
    - **Unintended leftovers** — orphaned, half-removed, or stranded fragments (code, config, tests, docs, wiring) that no longer connect to anything; two implementations where one was meant to replace the other.
    - **Cause-based precedence** — for anything assembled from multiple sources: where two parts overlap or conflict, *which should stand and which is now dead weight?* Resolve by the sources' intent, not by chance (see the merge review type).
+   - **A domain standards pack is a valid lens source** — an installed domain reviewer skill (e.g. an animation-review skill with its standards catalog) supplies a pre-tuned lens set for the *conformance* type; spawn it as-is alongside, never instead of, the neutral defect review.
 
 ## Pick the review type deliberately — and state which (incl. the lens set)
 
@@ -72,6 +73,7 @@ A reviewer that reasons from your prompt instead of inspecting the actual artifa
 | **Forward / reframe** | If we adopted *this change/hypothesis*, what holds and breaks? | "this is not a defect review; evaluate adopting the idea below" |
 | **Parsimony / cut** | What can be removed, merged, or reframed away? | "find what to delete; the loop has only ever added" |
 | **Consolidation / merge** | Where parts from different sources overlap or conflict, which stands and what's a leftover? | point the reviewer at each source's **cause/intent record** (why each part exists) to judge precedence — but **exclude your own prior conclusions** (the plan, earlier findings) so it re-derives instead of parroting |
+| **Standards conformance** | What violates a fixed, published craft bar? | point the reviewer at the standards catalog (a domain reviewer skill, a STANDARDS doc, a style guide); here the standard IS the lens — leading *by the standard* is legitimate, leading by your suspicions still isn't. Expect a verdict (pass/block) — the only type where one is allowed, because the bar is external and checkable, not the reviewer's opinion |
 
 Blurring these produces mush. The lens checklist is part of the prompt — set it per type (Principle 8).
 
