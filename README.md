@@ -96,6 +96,16 @@ You don't drive the pipeline by hand — the **router** does. Two ways in:
 
 The router asks Yes/No gate questions (G0–G5: is setup done? is the design build-ready? is the build parallelizable?…) and refuses to skip ahead — that refusal is the point.
 
+## Composing with domain skill packs
+
+Disruptor is a **process** pipeline — it says nothing about what good CSS, good SQL, or good motion design looks like. That's deliberate: domain taste lives in **domain skill packs**, and the two compose in your agent at runtime, not in this repo.
+
+```bash
+npx skills@latest add smixs/disruptor-skills emilkowalski/skills
+```
+
+With a pack like [emilkowalski/skills](https://github.com/emilkowalski/skills) (UI polish and animation craft) installed alongside, builders in stage 5 pick up the domain taste automatically, and stage 5a can spawn the pack's reviewer (e.g. `review-animations`) as a **standards-conformance review** — running beside, never instead of, the neutral cross-family defect review (see `spawning-reviewers`). The same shape works for any domain pack that ships expertise or a standards catalog.
+
 ## FAQ
 
 ### What is vibecode?
